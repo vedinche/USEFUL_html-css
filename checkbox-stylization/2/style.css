@@ -1,0 +1,41 @@
+.checkbox {
+	position: relative;
+	user-select: none; /*убрать выделение текста по клику*/
+}
+
+.checkbox__input {
+	position: absolute;
+	opacity: 0;
+}
+
+.checkbox__text {
+	border: 1px solid transparent;
+	position: relative;
+	display: inline-flex;
+	align-items: center;
+	font-weight: 700;
+	font-size: 12px;
+	line-height: 12px;
+	color: var(--color-light);
+}
+
+.checkbox__text::before {
+	content: '';
+	border: 1px solid currentColor;
+	margin-right: 8px;
+	width: 14px;
+	height: 14px;
+	background-image: url('check.svg');
+	background-position: center;
+	background-size: 80%;
+	background-repeat: no-repeat;
+	transition: var(--bg-transition);
+}
+
+.checkbox__input:checked + .checkbox__text::before {
+	background-image: none;
+}
+
+.checkbox__input:focus-visible + .checkbox__text {
+	border-color: var(--color-light);
+}

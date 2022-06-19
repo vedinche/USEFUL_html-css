@@ -1,0 +1,71 @@
+/* body {
+	background: #808080;
+}
+
+div {
+	position: relative;
+	width: 50px;
+	height: 50px;
+	border-radius: 100%;
+	background: red;
+}
+
+div::before,
+div::after {
+	content: '';
+	position: absolute;
+	top: 21px;
+	width: 31px;
+	height: 1px;
+	border-radius: 2px;
+	background: #fff;
+}
+
+div::before {
+	left: 8px;
+	transform: rotate(45deg);
+}
+
+div::after {
+	right: 8px;
+	transform: rotate(-45deg);
+} */
+
+div {
+	position: relative;
+	height: 50px; 
+	width: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 100%;
+	background: gray;
+	cursor: pointer;
+}
+
+div::before,
+div::after {
+	position: absolute;
+	content: '';
+	width: 70%;
+	height: 4px;
+	background-color: black;
+}
+
+div::before {
+	transform: rotate(0);
+	transition: transform .2s ease;
+}
+
+div::after {
+	transform: rotate(90deg);
+	transition: transform .2s ease;
+}
+
+div:active::after {
+	transform: rotate(45deg);
+}
+
+div:active::before {
+	transform: rotate(-45deg);
+}

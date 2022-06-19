@@ -1,0 +1,48 @@
+.form {
+	max-width: 300px;
+	display: flex;
+	padding: 40px;
+	margin: 40px auto;
+	background: #222;
+}
+
+.form__label {
+	position: relative;
+	padding-left: 22px;
+	cursor: pointer;
+	color: #cacaca;
+}
+
+.form__checkbox {
+	opacity: 0;
+	width: 0;
+}
+
+.form__checkbox+.form__checkbox-style {
+	position: absolute;
+	top: 0;
+	left: 0;
+	text-align: center;
+	width: 14px;
+	height: 14px;
+	border: 2px solid #cacaca;
+}
+
+.form__checkbox+.form__checkbox-style::before {
+	content: '\2714';
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	color: #97ee3f;
+	font-size: 10px;
+	font-weight: 700;
+	opacity: 0;
+	transition: opacity .2s ease-in-out;
+}
+
+.form__checkbox:checked+
+.form__checkbox-style::before {
+	opacity: 1;
+}

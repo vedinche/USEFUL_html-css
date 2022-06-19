@@ -1,0 +1,43 @@
+.main {
+	max-width: 800px;
+	margin: 40px auto 0;
+	overflow: hidden;
+}
+
+.swiper-container {
+	position: relative;
+	width: 100%;
+	height: 400px;
+}
+
+.title {
+	position: absolute;
+	top: 20px;
+	left: calc(50% - 50px);
+	margin: 0;
+	color: #fff;
+	text-transform: uppercase;
+	z-index: 2;
+}
+
+.slide-img-1 {
+	background: url('../img/cat-1.jpeg') no-repeat center center / cover;
+}
+
+.slide-img-2 {
+	background: url('../img/cat-2.jpg') no-repeat center center / cover;
+}
+
+.slide-img-3 {
+	background: url('../img/cat-3.jpg') no-repeat center center / cover;
+}
+
+.swiper-pagination-bullet {
+	width: 12px;
+	height: 12px;
+	--swiper-pagination-bullet-horizontal-gap: 10px;
+}
+
+.swiper-pagination-bullet-active {
+	background: rgb(17, 233, 240);
+}
