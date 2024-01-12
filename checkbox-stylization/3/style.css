@@ -1,0 +1,117 @@
+body {
+	padding-top: 40px;
+}
+
+.task {
+	padding-left: 60px;
+	margin-bottom: 40px;
+}
+
+/* checkbox */
+
+.custom-checkbox {
+	user-select: none;
+	cursor: pointer;
+}
+
+.custom-checkbox-input {
+	position: absolute;
+	appearance: none;
+}
+
+.custom-checkbox-text {
+	position: relative;
+	padding-left: 20px;
+}
+
+.custom-checkbox-text::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 50%;
+	width: 15px;
+	height: 15px;
+	border: 1px solid #000;
+	transform: translateY(-50%);
+}
+
+.custom-checkbox-text::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 50%;
+	width: 15px;
+	height: 15px;
+	background-image: url("https://cdn-icons-png.flaticon.com/512/32/32282.png");
+	background-position: center;
+	background-size: 70%;
+	background-repeat: no-repeat;
+	transform: translateY(-50%);
+	opacity: 0;
+	transition: opacity .3s;
+}
+
+.custom-checkbox-input:checked 
++ .custom-checkbox-text::after {
+opacity: 1;
+}
+
+.custom-checkbox-input:focus 
++ .custom-checkbox-text {
+outline: 1px solid #000;
+outline-offset: 3px;
+}
+
+/* radio */
+
+.custom-radio {
+	user-select: none;
+	cursor: pointer;
+}
+
+.custom-radio-input {
+	position: absolute;
+	appearance: none;
+}
+
+.custom-radio-text {
+	position: relative;
+	padding-left: 20px;
+}
+
+.custom-radio-text::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 50%;
+	width: 15px;
+	height: 15px;
+	border-radius: 100%;
+	border: 1px solid #000;
+	transform: translateY(-50%);
+}
+
+.custom-radio-text::after {
+	content: "";
+	position: absolute;
+	left: 6px;
+	top: 50%;
+	width: 5px;
+	height: 5px;
+	border-radius: 100%;
+	background-color: #000;
+	transform: translateY(-50%);
+	opacity: 0;
+	transition: opacity .3s;
+}
+
+.custom-radio-input:checked 
++ .custom-radio-text::after {
+opacity: 1;
+}
+
+.custom-radio-input:focus 
++ .custom-radio-text {
+outline: 1px solid #000;
+outline-offset: 3px;
+}
