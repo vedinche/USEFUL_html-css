@@ -1,58 +1,120 @@
 <!DOCTYPE html>
-<!-- Coding By CodingNepal - codingnepalweb.com -->
-<html lang="en" dir="ltr">
+<html lang="en">
 
 <head>
 	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title> Registration or Sign Up form in HTML CSS | CodingLab </title>
+	<title>Form</title>
 	<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-	<div class="wrapper">
-		<div class="title-text">
-			<div class="title login">Login Form</div>
-			<div class="title signup">Signup Form</div>
-		</div>
-		<div class="form-container">
-			<div class="slide-controls">
-				<input type="radio" name="slide" id="login" checked>
-				<input type="radio" name="slide" id="signup">
-				<label for="login" class="slide login">Login</label>
-				<label for="signup" class="slide signup">Signup</label>
-				<div class="slider-tab"></div>
+	<header class="header">
+		<button class="open-form btn-reset">
+			Click me
+		</button>
+	</header>
+	<div class="form-modal">
+		<div class="login__form-wrapper">
+			<div class="login__form-top">
+				<button class="login__form-close btn-reset">&times;</button>
+				<div class="login__form-title login">
+					Login Form
+				</div>
+				<button class="login__form-close btn-reset">&times;</button>
+				<div class="login__form-title signup">
+					Signup Form
+				</div>
 			</div>
-			<div class="form-inner">
-				<form action="#" class="login">
-					<div class="field">
-						<input type="text" placeholder="Email Address" required>
-					</div>
-					<div class="field">
-						<input type="password" placeholder="Password" required>
-					</div>
-					<div class="pass-link"><a href="#">Forgot password?</a></div>
-					<div class="field btn">
-						<div class="btn-layer"></div>
-						<input type="submit" value="Login">
-					</div>
-					<div class="signup-link">Not a member? <a href="">Signup now</a></div>
-				</form>
-				<form action="#" class="signup">
-					<div class="field">
-						<input type="text" placeholder="Email Address" required>
-					</div>
-					<div class="field">
-						<input type="password" placeholder="Password" required>
-					</div>
-					<div class="field">
-						<input type="password" placeholder="Confirm password" required>
-					</div>
-					<div class="field btn">
-						<div class="btn-layer"></div>
-						<input type="submit" value="Signup">
-					</div>
-				</form>
+			<div class="login__form-container">
+				<div class="login__form-slide">
+					<input type="radio" name="slide" id="login" checked>
+					<input type="radio" name="slide" id="signup">
+					<label for="login" class="slide login" tabindex="1">Login</label>
+					<label for="signup" class="slide signup" tabindex="2">Signup</label>
+					<div class="slider-tab"></div>
+				</div>
+				<div class="login__form-inner">
+					<form action="#" class="login__form login">
+						<div class="login__form-field">
+							<input class="login__form-input" type="text" placeholder="Email Address" required>
+						</div>
+						<div class="login__form-field">
+							<input class="login__form-input" type="password" placeholder="Password" required>
+						</div>
+						<div class="login__form-pass"><a href="#">Forgot password?</a></div>
+						<div class="login__form-field login__form-btn login__form-btn-login">
+							<div class="btn-layer"></div>
+							<input class="login__form-input" type="submit" value="Login">
+						</div>
+						<div class="login__form-signup-link">Not a member? <a href="">Signup now</a></div>
+						<ul class="login__form-list list-reset">
+							<li class="login__form-item">
+								<a class="login__form-link" href="#!">
+									<img class="login__form-img" src="img/login-google.svg" alt="google">
+								</a>
+							</li>
+							<li class="login__form-item">
+								<a class="login__form-link" href="#!">
+									<img class="login__form-img" src="img/login-facebook.svg" alt="facebook">
+								</a>
+							</li>
+							<li class="login__form-item">
+								<a class="login__form-link" href="#!">
+									<img class="login__form-img" src="img/linkedin.svg" alt="linkedin">
+								</a>
+							</li>
+							<li class="login__form-item">
+								<a class="login__form-link" href="#!">
+									<img class="login__form-img" src="img/login-twitter.svg" alt="twitter">
+								</a>
+							</li>
+						</ul>
+					</form>
+					<form action="#" class="login__form signup">
+						<div class="login__form-field">
+							<input class="login__form-input" type="text" placeholder="Email Address" required>
+						</div>
+						<div class="login__form-field">
+							<input class="login__form-input" type="password" placeholder="Password" required>
+						</div>
+						<div class="login__form-field login__form-confirm-password">
+							<input class="login__form-input" type="password" placeholder="Confirm password" required>
+						</div>
+						<label class="login__form-label" for="agree">
+							<input class="login__form-checkbox" id="agree" type="checkbox" name="agree" checked>
+							I&nbsp;agree to&nbsp;data processing
+							<span class="login__form-checkbox-style"></span>
+						</label>
+						<div class="login__form-field login__form-btn login__form-btn-signup">
+							<div class="btn-layer"></div>
+							<input type="submit" value="Signup">
+						</div>
+						<ul class="login__form-list list-reset">
+							<li class="login__form-item">
+								<a class="login__form-link" href="#!">
+									<img class="login__form-img" src="img/login-google.svg" alt="google">
+								</a>
+							</li>
+							<li class="login__form-item">
+								<a class="login__form-link" href="#!">
+									<img class="login__form-img" src="img/login-facebook.svg" alt="facebook">
+								</a>
+							</li>
+							<li class="login__form-item">
+								<a class="login__form-link" href="#!">
+									<img class="login__form-img" src="img/linkedin.svg" alt="linkedin">
+								</a>
+							</li>
+							<li class="login__form-item">
+								<a class="login__form-link" href="#!">
+									<img class="login__form-img" src="img/login-twitter.svg" alt="twitter">
+								</a>
+							</li>
+						</ul>
+					</form>
+				</div>
 			</div>
 		</div>
 	</div>
