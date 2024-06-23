@@ -1,0 +1,24 @@
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth
+}
+
+.back-to-top {
+	background: rgb(214, 217, 214, .2);
+	border-radius: 50%;
+	position: fixed;
+	bottom: -50px;
+	padding: 10px 12px;
+	right: 15px;
+	cursor: pointer;
+	transition: 0.3s all;
+}
+
+.back-to-top.active {
+	bottom: 50px;
+	transition: all .2s ease-in-out;
+}
+
+.back-to-top:hover {
+background: rgb(214, 217, 214, .6);
+}
