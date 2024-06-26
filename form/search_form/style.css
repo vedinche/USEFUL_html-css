@@ -152,6 +152,11 @@ body {
 	outline: none;
 }
 
+.search-open.hide {
+	opacity: 0;
+	visibility: hidden;
+}
+
 .search-icon {
 	fill: var(--color-gray);
 	transition: var(--fill-transition);

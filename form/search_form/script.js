@@ -1,16 +1,3 @@
-// let icon = document.querySelector('.search-icon');
-// let form = document.querySelector('.search-form');
-
-// icon.addEventListener('click', function () {
-//   form.classList.toggle('open');
-//   if (form.classList.contains('open')) {
-//     form.querySelector('input.search').focus();
-//   }
-// });
-
-// let searchOpen = document.querySelector('.search-open');
-// let searchModal = document.querySelector('.search-modal');
-
 let searchOpen = document.querySelector('.search-open');
 let searchModal = document.querySelector('.search-modal');
 let searchInput = document.querySelector('.search-form__input');
