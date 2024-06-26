@@ -3,7 +3,7 @@ let loginText = document.querySelector('.login__form-top .login');
 let loginForm = document.querySelector('form.login');
 let loginBtn = document.querySelector('label.login');
 let signupBtn = document.querySelector('label.signup');
-let signupLink = document.querySelector('.login__form-signup-link a');
+let signupLink = document.querySelector('.login__form-signup-link');
 
 signupBtn.onclick = () => {
   loginForm.style.marginLeft = '-50%';
@@ -19,25 +19,25 @@ signupLink.onclick = () => {
 };
 
 //for form modal
-let openButton = document.querySelector('.open-form');
+let openButton = document.querySelector('.login__form-open');
 let closeButton = document.querySelectorAll('.login__form-close');
 let formModal = document.querySelector('.form-modal');
 
-// Add a "click" event for the щзут buttons
+// Add a 'click' event for the open buttons
 openButton.addEventListener('click', function () {
-  formModal.style.display = 'block';
+  formModal.classList.add('open');
 });
 
-// Add a "click" event for the close buttons
+// Add a 'click' event for the close buttons
 for (let i = 0; i < closeButton.length; i++) {
   closeButton[i].addEventListener('click', function () {
-    formModal.style.display = 'none';
+    formModal.classList.remove('open');
   });
 }
 
 //Close the modal window when clicking outside it
 window.addEventListener('click', function (event) {
   if (event.target === formModal) {
-    formModal.style.display = 'none';
+    formModal.classList.remove('open');
   }
 });
