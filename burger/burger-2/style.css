@@ -1,0 +1,72 @@
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.btn-reset {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.container {
+  display: flex;
+  justify-self: center;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.burger {
+  width: 55px;
+  height: 55px;
+  border-radius: 10px;
+  background: white;
+  box-shadow: rgb(136 165 191 / 48%) 6px 2px 16px 0px, rgb(255 255 255 / 80%) -6px -2px 16px 0px;
+  cursor: pointer;
+  transition: all .5s ease;
+  margin: 1em;
+}
+
+.burger:hover {
+  background: rgb(56 56 56);
+}
+
+.burger__wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.burger__line {
+  display: block;
+  height: 3px;
+  border-radius: 2px;
+  background: rgb(56 56 56);
+  transition: all .55s cubic-bezier(0.075, 0.82, 0.165, 1);
+  width: 40px;
+}
+
+.burger__line:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.burger:hover .burger__line {
+  background: white;
+}
+
+.burger:hover .burger__wrap .line-1 {
+  transform: translateY(13px) rotate(45deg);
+}
+
+.burger:hover .burger__wrap .line-2 {
+  opacity: 0;
+}
+
+.burger:hover .burger__wrap .line-3 {
+  transform: translateY(-13px) rotate(-45deg);
+}
